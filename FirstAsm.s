@@ -1,0 +1,18 @@
+	EXPORT __main
+	AREA   PROG_1, CODE, READONLY
+__main
+	LDR R1, =A
+	LDR R2, [R1]
+	LDR R1, =B
+	LDR R3, [R1]
+	ADD R4, R2, R3
+	LDR R1, =C
+	STR R4, [R1]
+END B END
+	AREA Datal, DATA, READWRITE
+A	DCD 2
+B	DCD 3
+C	DCD 0
+	
+	END
+	END
